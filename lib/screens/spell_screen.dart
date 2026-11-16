@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/spell.dart';
 import '../models/spell_favorite.dart';
-import 'character_screen.dart';
+import 'home_screen.dart';
 import 'favorite_spell_screen.dart';
 import 'login_screen.dart';
 
@@ -186,7 +186,7 @@ class _SpellScreenState extends State<SpellScreen> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => CharacterScreen()),
+                MaterialPageRoute(builder: (context) => HomeScreen()),
               );
             },
             child: Text('Characters'),

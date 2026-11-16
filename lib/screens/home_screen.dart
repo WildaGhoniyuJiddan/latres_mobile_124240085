@@ -9,14 +9,14 @@ import 'character_detail_screen.dart';
 import 'login_screen.dart';
 import 'spell_screen.dart';
 
-class CharacterScreen extends StatefulWidget {
-  const CharacterScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<CharacterScreen> createState() => _CharacterScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _CharacterScreenState extends State<CharacterScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   List<Character> _characters = [];
   bool _isLoading = true;
   String _error = '';

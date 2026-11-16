@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'notification_helper.dart';
 import 'models/spell_favorite.dart';
-import 'screens/character_screen.dart';
+import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 
 void main() async {
@@ -31,7 +31,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: isLoggedIn ? CharacterScreen() : LoginScreen(),
+      home: isLoggedIn ? HomeScreen() : LoginScreen(),
     );
   }
 }
