@@ -3,14 +3,14 @@ import 'package:hive/hive.dart';
 
 import '../notification_helper.dart';
 
-class FavoriteSpellPage extends StatefulWidget {
-  const FavoriteSpellPage({super.key});
+class FavoriteSpellScreen extends StatefulWidget {
+  const FavoriteSpellScreen({super.key});
 
   @override
-  State<FavoriteSpellPage> createState() => _FavoriteSpellPageState();
+  State<FavoriteSpellScreen> createState() => _FavoriteSpellScreenState();
 }
 
-class _FavoriteSpellPageState extends State<FavoriteSpellPage> {
+class _FavoriteSpellScreenState extends State<FavoriteSpellScreen> {
   late Box _box;
 
   @override

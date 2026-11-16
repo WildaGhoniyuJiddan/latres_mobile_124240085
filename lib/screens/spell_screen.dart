@@ -6,18 +6,18 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/spell.dart';
-import 'character_page.dart';
-import 'favorite_spell_page.dart';
-import 'login_page.dart';
+import 'character_screen.dart';
+import 'favorite_spell_screen.dart';
+import 'login_screen.dart';
 
-class SpellPage extends StatefulWidget {
-  const SpellPage({super.key});
+class SpellScreen extends StatefulWidget {
+  const SpellScreen({super.key});
 
   @override
-  State<SpellPage> createState() => _SpellPageState();
+  State<SpellScreen> createState() => _SpellScreenState();
 }
 
-class _SpellPageState extends State<SpellPage> {
+class _SpellScreenState extends State<SpellScreen> {
   List<Spell> _spells = [];
   bool _isLoading = true;
   String _error = '';
@@ -142,7 +142,7 @@ class _SpellPageState extends State<SpellPage> {
 
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage()),
+      MaterialPageRoute(builder: (context) => LoginScreen()),
       (route) => false,
     );
   }
@@ -167,7 +167,7 @@ class _SpellPageState extends State<SpellPage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => FavoriteSpellPage()),
+            MaterialPageRoute(builder: (context) => FavoriteSpellScreen()),
           ).then((_) {
             setState(() {});
           });
@@ -182,7 +182,7 @@ class _SpellPageState extends State<SpellPage> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => CharacterPage()),
+                MaterialPageRoute(builder: (context) => CharacterScreen()),
               );
             },
             child: Text('Characters'),

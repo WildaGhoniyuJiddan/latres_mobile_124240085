@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../models/character.dart';
 
-class CharacterDetailPage extends StatelessWidget {
+class CharacterDetailScreen extends StatelessWidget {
   final Character character;
 
-  const CharacterDetailPage({super.key, required this.character});
+  const CharacterDetailScreen({super.key, required this.character});
 
   @override
   Widget build(BuildContext context) {

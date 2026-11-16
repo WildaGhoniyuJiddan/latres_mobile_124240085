@@ -3,8 +3,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'notification_helper.dart';
-import 'screens/character_page.dart';
-import 'screens/login_page.dart';
+import 'screens/character_screen.dart';
+import 'screens/login_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: isLoggedIn ? CharacterPage() : LoginPage(),
+      home: isLoggedIn ? CharacterScreen() : LoginScreen(),
     );
   }
 }
