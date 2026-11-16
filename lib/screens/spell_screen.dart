@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/spell.dart';
+import '../models/spell_favorite.dart';
 import 'character_screen.dart';
 import 'favorite_spell_screen.dart';
 import 'login_screen.dart';
@@ -21,12 +22,12 @@ class _SpellScreenState extends State<SpellScreen> {
   List<Spell> _spells = [];
   bool _isLoading = true;
   String _error = '';
-  late Box _box;
+  late Box<SpellFavorite> _box;
 
   @override
   void initState() {
     super.initState();
-    _box = Hive.box('favorites');
+    _box = Hive.box<SpellFavorite>('favorites');
     _fetchSpells();
   }
 
@@ -91,11 +92,14 @@ class _SpellScreenState extends State<SpellScreen> {
         ),
       );
     } else {
-      await _box.put(spell.index, {
-        'spell': spell.spell,
-        'use': spell.use,
-        'index': spell.index,
-      });
+      await _box.put(
+        spell.index,
+        SpellFavorite(
+          spell: spell.spell,
+          use: spell.use,
+          index: spell.index,
+        ),
+      );
 
       if (!mounted) return;
       setState(() {});

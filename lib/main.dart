@@ -3,6 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'notification_helper.dart';
+import 'models/spell_favorite.dart';
 import 'screens/character_screen.dart';
 import 'screens/login_screen.dart';
 
@@ -10,7 +11,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Hive.initFlutter();
-  await Hive.openBox('favorites');
+  Hive.registerAdapter(SpellFavoriteAdapter());
+  await Hive.openBox<SpellFavorite>('favorites');
 
   await initNotification();
 
