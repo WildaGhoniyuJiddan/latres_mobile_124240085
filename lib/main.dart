@@ -3,8 +3,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'notification_helper.dart';
-import 'pages/character_page.dart';
-import 'pages/login_page.dart';
+import 'screens/character_page.dart';
+import 'screens/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
