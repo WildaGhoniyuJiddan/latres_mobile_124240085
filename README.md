@@ -29,7 +29,7 @@ flutter run
 
 ## Package yang dipakai
 
-- `http` — ambil data API
-- `shared_preferences` — simpan session login
-- `hive` + `hive_flutter` — simpan spell favorite
-- `flutter_local_notifications` — notifikasi hapus favorite
+- `http` ambil data API
+- `shared_preferences` simpan session login
+- `hive` + `hive_flutter` simpan spell favorite
+- `flutter_local_notifications` notifikasi hapus favorite
