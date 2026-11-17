@@ -1,14 +1,14 @@
-# Latihan Responsi Mobile — Aplikasi Harry Potter
+# Latihan Responsi Mobile Aplikasi Harry Potter
 
 Aplikasi Flutter sederhana untuk latihan responsi Praktikum Teknologi dan Pemrograman Mobile.
 
 ## Fitur
 
-1. **Login** — username/password hardcoded, session disimpan di SharedPreferences, snackbar sukses/gagal
-2. **Characters** — data karakter Harry Potter dari API, tap untuk lihat detail (semua property)
-3. **Spells** — data spell dari API, tombol favorite (disimpan di Hive), snackbar add/remove
-4. **Favorite Spell** — daftar spell favorite, hapus dengan notifikasi (local notification)
-5. **Logout** — ada di AppBar halaman Characters dan Spells
+1. **Login**  username/password hardcoded, session disimpan di SharedPreferences, snackbar sukses/gagal
+2. **Characters**  data karakter Harry Potter dari API, tap untuk lihat detail (semua property)
+3. **Spells**  data spell dari API, tombol favorite (disimpan di Hive), snackbar add/remove
+4. **Favorite Spell**  daftar spell favorite, hapus dengan notifikasi (local notification)
+5. **Logout**  ada di AppBar halaman Characters dan Spells
 
 ## Kredensial Login
 
