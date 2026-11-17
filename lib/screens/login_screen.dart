@@ -22,8 +22,8 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Future<void> _login() async {
-    String username = _usernameController.text;
-    String password = _passwordController.text;
+    String username = _usernameController.text.trim();
+    String password = _passwordController.text.trim();
 
     if (username == 'username' && password == 'password') {
       SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -95,6 +95,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  SizedBox(height: 8),
+                  Text('Demo login: username / password'),
                   SizedBox(height: 20),
                   TextField(
                     controller: _usernameController,
